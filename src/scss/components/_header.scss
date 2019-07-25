@@ -1,0 +1,62 @@
+.header {
+	padding-top: vw(25);
+
+	.container {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.part-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	.header-address {
+		display: flex;
+		margin-left: vw(20);
+		font-family: $g-p-light;
+		font-style: normal;
+
+		> img {
+			margin-right: vw(20);
+			width: vw(60);
+			height: vw(50);
+		}
+	}
+
+	.c-h {
+		font-size: vw(12);
+		letter-spacing: vw(0.5);
+		opacity: 0.6;
+	}
+
+	.c-text {
+		font-size: vw(13);
+		line-height: vw(24);
+		color: $main-font-color;
+	}
+
+	.c-sub {
+		font-size: vw(12);
+		opacity: 0.6;
+
+		img {
+			margin-right: vw(4);
+		}
+	}
+
+	.telephone {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: vw(-20);
+			top: vw(3);
+			width: vw(13);
+			height: vw(13);
+			background-image: url("../../images/phone-call.png");
+			background-repeat: no-repeat;
+		}
+	}
+	
+}

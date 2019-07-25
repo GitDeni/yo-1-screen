@@ -1,0 +1,144 @@
+.main-section {
+	padding-top: vw(60);
+	padding-bottom: vw(50);
+	box-shadow: 0 vw(50) vw(50) 0 rgba(0, 0, 0, 0.02);
+
+	.container {
+		justify-content: space-between;
+	}
+
+	&_content {
+		// padding-left: vw(100);
+
+		h1 {
+			margin-bottom: vw(10);
+			font-family: $g-p-light;
+			font-size: vw(38);
+			line-height: 55px;
+			letter-spacing: vw(1.5);
+			text-transform: uppercase;
+			color: $main-font-color;
+
+			span {
+				font-family: $g-p-medium;
+			}
+		}
+
+		.paragraph {
+			position: relative;
+			padding-bottom: vw(40);
+			padding-left: vw(35);
+			font-family: $g-p-light;
+			font-size: vw(18);
+			line-height: vw(30);
+			color: $main-font-color;
+
+			span {
+				font-family: $g-p-medium;
+			}
+		}
+
+		.main-button {
+			margin-bottom: vw(45);
+		}
+
+		.paragraph::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: vw(10);
+			width: vw(20);
+			height: vw(10);
+			background-image: url("../../images/blue-ellipse.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.subp {
+			display: flex;
+			font-family: $g-p-bold;
+			font-size: vw(13);
+			line-height: vw(20);
+
+			img {
+				margin-right: vw(10);
+			}
+		}
+	}
+
+	.car-section_right {
+		width: 32%;
+
+		.car-taxi {
+			width: vw(763);
+			height: vw(354);
+			position: absolute;
+			right: vw(-50);
+			top: vw(180);
+			z-index: 1;
+		}
+	}
+
+	.tree {
+		width: vw(452);
+		height: vw(340);
+		position: absolute;
+		right: vw(60);
+		top: 0;
+	}
+}
+
+.bottom {
+	padding-top: vw(70);
+	background-image: url('../../images/bg_img.png');
+
+	.card-wrapper {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.box {
+			margin-right: vw(50);
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		.card {
+			display: flex;
+			margin-bottom: vw(50);
+
+			.img {
+				margin-right: vw(20);
+
+				img {
+					width: vw(60);
+					height: vw(60);
+				}
+			}
+
+			.text {
+				padding-top: vw(10);
+				font-family: $g-p-light;
+				font-size: vw(13);
+				line-height: vw(20);
+
+				span {
+					font-family: $g-p-bold;
+					text-transform: uppercase;
+					margin-bottom: vw(10);
+				}
+			}
+
+		}
+
+		.taxi-lights {
+			img {
+				width: vw(331);
+				height: vw(167);
+			}
+		}
+
+	}
+}
