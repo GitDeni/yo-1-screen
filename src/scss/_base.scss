@@ -301,6 +301,31 @@ h2::before {
 	background-position: 90% 50%;
 	background-repeat: no-repeat;
 	background-color: #fff;
+	transition: all 0.15s;
+
+	&:hover {
+		border: 1px solid #000;
+		transition: all 0.15s;
+	}
+}
+
+.main-input.intro {
+	border: 1px solid #66f849;
+}
+
+.introo {
+	background-color: #f2fff0;
+	transition: all 0.15s;
+}
+
+.errorr {
+	color: #ff2e2e;
+	background-color: #ffe3e3;
+	transition: all 0.15s;
+}
+
+.main-input.error {
+	border: 1px solid #ff3131;
 }
 
 h3 {
@@ -334,4 +359,13 @@ h3 {
 .tab-pane.active {
 	display: flex;
 	justify-content: space-between;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.middle-tab {
+	display: flex;
+	align-items: center;
 }
