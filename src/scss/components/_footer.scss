@@ -1,8 +1,17 @@
 .footer {
 	padding-top: vw(50);
 	padding-bottom: vw(60);
+
+	@include mobile {
+		padding-top: vmin(50);
+		padding-bottom: vmin(60);
+	}
 	.container {
 		justify-content: space-between;
+
+		@include mobile {
+			justify-content: center;
+		}
 	}
 
 	.left {
@@ -14,8 +23,16 @@
 		align-items: center;
 		color: $main-font-color;
 
+		@include mobile {
+			margin-top: vmin(20);
+		}
+
 		&__logo {
 			margin-left: vw(20);
+
+			@include mobile {
+				margin-left: vmin(20);
+			}
 		}
 	}
 }

@@ -2,6 +2,11 @@
 	padding-top: vw(60);
 	padding-bottom: vw(50);
 	box-shadow: 0 vw(50) vw(50) 0 rgba(0, 0, 0, 0.02);
+	
+	@include mobile {
+		padding-top: vmin(60);
+		padding-bottom: vmin(50);
+	}
 
 	.container {
 		justify-content: space-between;
@@ -18,6 +23,14 @@
 			letter-spacing: vw(1.5);
 			text-transform: uppercase;
 			color: $main-font-color;
+			
+
+			@include mobile {
+				margin-bottom: vmin(10);
+				font-size: vmin(36);
+				line-height: vmin(55);
+				letter-spacing: vmin(1.5);
+			}
 
 			span {
 				font-family: $g-p-medium;
@@ -33,6 +46,13 @@
 			line-height: vw(30);
 			color: $main-font-color;
 
+			@include mobile {
+				padding-bottom: vmin(40);
+				padding-left: vmin(35);
+				font-size: vmin(18);
+				line-height: vmin(30);
+			}
+
 			span {
 				font-family: $g-p-medium;
 			}
@@ -40,6 +60,10 @@
 
 		.main-button {
 			margin-bottom: vw(45);
+
+			@include mobile {
+				margin-bottom: vmin(45);
+			}
 		}
 
 		.paragraph::before {
@@ -52,6 +76,18 @@
 			background-image: url("../../images/blue-ellipse.png");
 			background-size: contain;
 			background-repeat: no-repeat;
+
+			@include mobile {
+				top: vmin(10);
+				width: vmin(20);
+				height: vmin(10);
+			}
+
+			br {
+				@include mobile {
+					display: none;
+				}
+			}
 		}
 
 		.subp {
@@ -60,8 +96,20 @@
 			font-size: vw(13);
 			line-height: vw(20);
 
+			@include mobile {
+				flex-wrap: wrap;
+				justify-content: center;
+				font-size: vmin(13);
+				line-height: vmin(20);
+			}
+
 			img {
 				margin-right: vw(10);
+
+				@include mobile {
+					margin-right: 0;
+					margin-bottom: vmin(20);
+				}
 			}
 		}
 	}
@@ -76,6 +124,13 @@
 			right: vw(-50);
 			top: vw(180);
 			z-index: 1;
+
+			@include mobile {
+				width: vmin(200);
+				height: vmin(93);
+				right: vmin(10);
+				top: vmin(-60);
+			}
 		}
 	}
 
@@ -85,6 +140,13 @@
 		position: absolute;
 		right: vw(60);
 		top: 0;
+
+		@include mobile {
+			width: vmin(200);
+			height: vmin(150);
+			right: vmin(-40);
+			top: vmin(-140);
+		}
 	}
 }
 
@@ -109,12 +171,29 @@
 			display: flex;
 			margin-bottom: vw(50);
 
+			@include mobile {
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-bottom: vmin(50);
+			}
+
 			.img {
 				margin-right: vw(20);
+
+				@include mobile {
+					width: 100%;
+					text-align: center;
+					margin-right: 0;
+				}
 
 				img {
 					width: vw(60);
 					height: vw(60);
+
+					@include mobile {
+						width: vmin(60);
+						height: vmin(60);
+					}
 				}
 			}
 
@@ -124,10 +203,27 @@
 				font-size: vw(13);
 				line-height: vw(20);
 
+				@include mobile {
+					// width: 100%;
+					padding-top: vmin(10);
+					font-size: vmin(14);
+					line-height: vmin(20);
+				}
+
+				br {
+					@include mobile {
+						display: none;
+					}
+				}
+
 				span {
 					font-family: $g-p-bold;
 					text-transform: uppercase;
 					margin-bottom: vw(10);
+
+					@include mobile {
+						margin-bottom: vmin(10);
+					}
 				}
 			}
 
@@ -137,8 +233,12 @@
 			img {
 				width: vw(331);
 				height: vw(167);
+
+				@include mobile {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
-
 	}
 }
