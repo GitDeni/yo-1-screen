@@ -24,10 +24,15 @@
 			text-transform: uppercase;
 			color: $main-font-color;
 			
+			br {
+				@include mobile {
+					display: none;
+				}
+			}
 
 			@include mobile {
 				margin-bottom: vmin(10);
-				font-size: vmin(36);
+				font-size: vmin(32);
 				line-height: vmin(55);
 				letter-spacing: vmin(1.5);
 			}
@@ -129,7 +134,7 @@
 				width: vmin(200);
 				height: vmin(93);
 				right: vmin(10);
-				top: vmin(-60);
+				top: vmin(-70);
 			}
 		}
 	}

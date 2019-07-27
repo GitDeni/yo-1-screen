@@ -87,9 +87,9 @@
 	.burger {
 		display: none;
 
-		@include mobile {
-			display: inline-block;
-		}
+		// @include mobile {
+		// 	display: inline-block;
+		// }
 		img {
 			width: vmin(45);
 			height: vmin(40);
