@@ -52,12 +52,17 @@ a {
 	color: rgba(9, 38, 58, 0.8);
 	transition: all 0.3s ease-in-out;
 
+	@media (max-width:1400px) {
+		border-radius: vmin(26);
+		padding: vw(10) vw(22);
+	}
+
 	@include mobile {
 		margin-left: vmin(30);
 		border-radius: vmin(26);
-		padding: vmin(18) vmin(23);
-		font-size: vmin(13);
-		display: none;
+    padding: vmin(15) vmin(22);
+    font-family: $g-p-light;
+		font-size: vmin(14);
 	}
 
 	img {
@@ -95,9 +100,8 @@ a {
 	@include mobile {
 		margin-left: vmin(30);
 		border-radius: vmin(26);
-		padding: vmin(18) vmin(23);
-		font-size: vmin(13);
-		// display: none;
+    padding: vmin(18) vmin(23);
+		display: none;
 	}
 
 	&:hover {
@@ -129,7 +133,7 @@ a {
 	
 	@include mobile {
 		border-radius: vmin(35);
-		width: vmin(280);
+		width: vmin(320);
 		height: vmin(70);
 		font-size: vmin(14);
 	}
@@ -243,7 +247,7 @@ h2::before {
 	position: absolute;
 	width: vw(146);
 	height: vw(21);
-	background-image: url("../images/logo-eng.png");
+	// background-image: url("../images/logo-eng.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	

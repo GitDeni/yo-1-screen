@@ -11,7 +11,9 @@
 		align-items: center;
 
 		@include mobile {
-			flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto vmin(15);
 		}
 	}
 
@@ -21,10 +23,18 @@
 			height: vw(43);
 
 			@include mobile {
-				width: vmin(187);
-				height: vmin(43);
+				width: vmin(196);
+        height: vmin(41);
 			}
-		}
+    }
+    
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: vmin(30);
+      margin-top: vmin(20);
+    }
 	}
 
 	.header-address {
@@ -37,12 +47,16 @@
 			margin-right: vw(20);
 			width: vw(60);
 			height: vw(50);
-		}
+    }
+    
+    @media (max-width: 1366px) {
+      display: none;
+    }
 		
-		@include mobile {
-			display: none;
-			margin-left: vmin(20);
-		}
+		// @include mobile {
+		// 	display: none;
+		// 	margin-left: vmin(20);
+		// }
 	}
 
 	.c-h {
@@ -118,8 +132,8 @@
 		}
 
 		@include mobile {
-			font-size: vmin(16);
-			margin: vmin(20);
+      font-size: vmin(16);
+      margin-left: vmin(40);
 		}
 	}
 }

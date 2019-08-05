@@ -68,7 +68,7 @@
 .popup-close {
 	position: absolute;
 	right: vw(-80);
-	top: vw(-60);
+	top: 0;
 	width: vw(40);
 	height: vw(40);
 	background-image: url("../../images/close-modal.png");
@@ -79,10 +79,12 @@
 	cursor: pointer;
 
 	@include mobile {
-		right: 40%;
-		top: vmin(-60);
-		width: vmin(40);
-		height: vmin(40);
+		background-image: url("../../images/close-grey.png");
+		right: vmin(5);
+		top: vmin(25);
+		width: vmin(20);
+		height: vmin(20);
+		z-index: 6;
 	}
 }
 
@@ -94,6 +96,10 @@
 	@include mobile {
 		width: 100%;
 		height: vmin(827);
+	}
+	
+	@media (max-width: 1024px) {
+		height: vmin(780);
 	}
 
 	.wrapper {
@@ -248,6 +254,7 @@
 
 			@include mobile {
 				flex-wrap: wrap;
+				justify-content: center;
 			}
 
 			.circle {
@@ -323,4 +330,162 @@
 			}
 		}
 	}
+}
+
+
+.taxi-consult {
+  width: vw(1050);
+  height: vw(505);
+
+  @include mobile {
+    width: 100%;
+    height: vmin(1070);
+  }
+
+  .wrapper {
+    padding: vw(40);
+
+    @include mobile {
+      padding: vmin(40);
+    }
+  }
+  
+  &__heading {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: vw(40);
+
+    @include mobile {
+      margin-bottom: vmin(40);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: vw(40);
+    padding-top: vw(30);
+    padding-bottom: vw(30);
+    box-shadow: 0px 5px 12px 0 rgba(50, 50, 50, 0.1);
+
+    @include mobile {
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding-left: vmin(40);
+      margin-bottom: vmin(40);
+    }
+  }
+  .h-h {
+    width: 70%;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    // width: 70%;
+  }
+
+  .manager {
+    display: flex;
+    align-items: center;
+    margin-right: vw(20);
+    width: 25%;
+
+    @include mobile {
+      margin-top: vmin(40);
+      margin-right: 0;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .img {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin-right: vw(20);
+      border-radius: 50%;
+      width: vw(64);
+      height: vw(64);
+      text-align: center;
+      background-color: #49b2f8;
+
+      @include mobile {
+        margin-right: vmin(10);
+        margin-bottom: vmin(20);
+        width: vmin(64);
+        height: vmin(64);
+      }
+
+      img {
+        width: vw(55);
+        height: vw(70);
+
+        @include mobile {
+          width: vmin(55);
+          height: vmin(70);
+        }
+      }
+    }
+
+    .name {
+      font-size: vw(12);
+
+      @include mobile {
+        font-size: vmin(12);
+      }
+
+      span {
+        font-family: $g-p-medium;
+        font-size: vw(13);
+        line-height: vw(22);
+        text-transform: uppercase;
+
+        @include mobile {
+          font-size: vmin(13);
+          line-height: vmin(22);
+        }
+      }
+    }
+  }
+
+  .t-c-card {
+    display: flex;
+    padding-left: vw(10);
+
+    @include mobile {
+      padding: vmin(20) 0;
+    }
+
+    &__img {
+      margin-right: vw(18);
+
+      @include mobile {
+        margin-right: vmin(18);
+      }
+    }
+
+    &__text {
+      font-size: vw(14);
+      line-height: vw(20);
+
+      @include mobile {
+        font-size: vmin(14);
+        line-height: vmin(20);
+      }
+
+      span {
+        font-family: $g-p-bold;
+      }
+    }
+  }
+
+  .consult__form {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

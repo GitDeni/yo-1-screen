@@ -4,16 +4,27 @@
 	box-shadow: 0 vw(50) vw(50) 0 rgba(0, 0, 0, 0.02);
 	
 	@include mobile {
-		padding-top: vmin(60);
+		padding-top: vmin(10);
 		padding-bottom: vmin(50);
 	}
 
 	.container {
-		justify-content: space-between;
+    justify-content: space-between;
+    
+    @include mobile {
+      justify-content: center;
+      padding: 0 vmin(60);
+    }
 	}
 
 	&_content {
-		// padding-left: vw(100);
+    // padding-left: vw(100);
+    
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
 		h1 {
 			margin-bottom: vw(10);
@@ -31,10 +42,11 @@
 			}
 
 			@include mobile {
-				margin-bottom: vmin(10);
-				font-size: vmin(32);
-				line-height: vmin(55);
-				letter-spacing: vmin(1.5);
+				margin-bottom: vmin(40);
+				font-size: vmin(29);
+				line-height: vmin(42);
+        letter-spacing: vmin(1.5);
+        text-align: center;
 			}
 
 			span {
@@ -55,7 +67,10 @@
 				padding-bottom: vmin(40);
 				padding-left: vmin(35);
 				font-size: vmin(18);
-				line-height: vmin(30);
+        line-height: vmin(30);
+        text-align: center;
+        padding-left: vmin(30);
+        padding-right: vmin(30);
 			}
 
 			span {
@@ -83,7 +98,8 @@
 			background-repeat: no-repeat;
 
 			@include mobile {
-				top: vmin(10);
+        top: vmin(-20);
+        left: 47%;
 				width: vmin(20);
 				height: vmin(10);
 			}
@@ -99,20 +115,27 @@
 			display: flex;
 			font-family: $g-p-bold;
 			font-size: vw(13);
-			line-height: vw(20);
+      line-height: vw(20);
+      
+      br {
+        @include mobile {
+          display: none;
+        }
+      }
 
 			@include mobile {
-				flex-wrap: wrap;
+				// flex-wrap: wrap;
 				justify-content: center;
 				font-size: vmin(13);
-				line-height: vmin(20);
+        line-height: vmin(20);
+        padding-right: vmin(10);
 			}
 
 			img {
 				margin-right: vw(10);
 
 				@include mobile {
-					margin-right: 0;
+					margin-right: vmin(20);
 					margin-bottom: vmin(20);
 				}
 			}
@@ -131,10 +154,10 @@
 			z-index: 1;
 
 			@include mobile {
-				width: vmin(200);
-				height: vmin(93);
-				right: vmin(10);
-				top: vmin(-70);
+				width: vmin(763);
+				height: vmin(354);
+				right: vmin(380);
+				top: vmin(120);
 			}
 		}
 	}
@@ -147,10 +170,10 @@
 		top: 0;
 
 		@include mobile {
-			width: vmin(200);
-			height: vmin(150);
-			right: vmin(-40);
-			top: vmin(-140);
+			width: vmin(452);
+			height: vmin(340);
+			right: vmin(390);
+			top: vmin(30);
 		}
 	}
 }
@@ -179,7 +202,8 @@
 			@include mobile {
 				flex-wrap: wrap;
 				justify-content: center;
-				margin-bottom: vmin(50);
+        margin-bottom: vmin(50);
+        text-align: center;
 			}
 
 			.img {

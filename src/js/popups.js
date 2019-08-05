@@ -6,8 +6,10 @@ $('.open-popup').magnificPopup({
 		},
 		afterClose: function () {
 		},
-	},
-	midClick: true
+  },
+  fixedContentPos: true,
+  fixedBgPos: true,
+	midClick: true,
 });
 
 $('.popup-close').click(function (e) {
